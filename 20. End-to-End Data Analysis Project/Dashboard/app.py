@@ -111,7 +111,7 @@ if selection == 'Business Snapshot':
         df_new_revenue = df.groupby(["InvoiceMonth", "InvoiceYear", "UserType"])["Revenue"].sum().reset_index()
         df_new_revenue["Revenue"] = df_new_revenue["Revenue"]/1000000
         plt.figure(figsize=(15, 10))
-        sns.relplot(x="InvoiceMonth", y="Revenue", hue="UserType", data=df_new_revenue, kind="line",)
+        sns.lineplot(x="InvoiceMonth", y="Revenue", hue="UserType", data=df_new_revenue)
         plt.title("New vs Existing Customers Revenue Overview")
         plt.xlabel("Month")
         plt.ylabel("Revenue (In millions)")
@@ -148,7 +148,7 @@ integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeV
 <div class="col l6 s12">
 <h5 class="white-text">Retail Analysis App</h5>
 <h6 class="grey-text text-lighten-4">This is Africa Data School Streamlit Class practical.</h6>
-<p class="grey-text text-lighten-4">August 2021 Cohort</p>
+<p class="grey-text text-lighten-4">April 2023 Cohort</p>
 </div>
 <div class="col l3 s12">
 <h5 class="white-text">Connect With Us</h5>
